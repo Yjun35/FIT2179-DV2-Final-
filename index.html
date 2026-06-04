@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="A data-driven story of Melbourne's coffee culture — from the global bean trade to the city's busiest morning streets.">
+  <title>Melbourne's Coffee Culture — A Data Story</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+  <main>
+
+    <!-- ===================================================== HERO ========= -->
+    <header class="hero">
+      <div class="frame">
+        <div class="hero-body">
+          <div class="hero-left">
+            <p class="label">FIT2179 · Data Visualisation 2</p>
+            <h1>How Melbourne Got Its <span class="accent">Coffee</span></h1>
+            <p class="lede">Coffee grows nowhere in Australia. The country still imports A$659 million of raw
+              beans a year, and Melbourne turned that dependence into one of the densest café cultures on earth.</p>
+            <p class="byline">A scrolling visual essay by <strong>Eugene Ooi</strong> ·
+              Built with Vega-Lite · June 2026</p>
+          </div>
+
+          <div class="statstrip">
+            <div class="stat">
+              <div class="num">1,645</div>
+              <div class="cap">cafés in central Melbourne, 2024</div>
+            </div>
+            <div class="stat">
+              <div class="num">+86%</div>
+              <div class="cap">growth in cafés since 2002</div>
+            </div>
+            <div class="stat">
+              <div class="num">A$659M</div>
+              <div class="cap">green coffee beans imported, 2023</div>
+            </div>
+            <div class="stat">
+              <div class="num">$5.50</div>
+              <div class="cap">what a Melbourne flat white costs today</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================================= INTRODUCTION ========= -->
+    <section>
+      <div class="frame">
+        <div class="intro">
+          <p class="lede">The reputation is real. So are the numbers behind it.</p>
+          <p>Between 2002 and 2019 the City of Melbourne's café and restaurant count climbed from
+            <strong>886 to 1,771</strong>. The beans behind those venues arrive from <strong>49
+              countries</strong>, and the CBD alone packs <strong>383 of them into every square
+              kilometre</strong>. This page follows the supply chain end to end: the equatorial farms
+            that grow the beans, the $66 billion national industry they feed, the two-decade expansion
+            that filled the city, the areas that absorbed it, and the record 2025 price shock now working
+            its way down to the counter. <span class="ref">(City of Melbourne, 2024; World Bank WITS, 2023)</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= CHAPTER 1 ============ -->
+    <section class="chapter">
+      <div class="band band--brown">
+        <div class="frame">
+          <span class="band-num">01</span>
+          <span class="band-label">The Global Journey</span>
+          <h2 class="band-title">Where the beans come from</h2>
+        </div>
+      </div>
+      <div class="frame">
+
+        <div class="row">
+          <div class="text c7">
+            <p class="dropcap"><strong>Every Melbourne coffee starts on the other side of the world.</strong>
+              The plant needs a tropical climate Victoria does not have, so the whole ritual runs on imports.
+              In 2023 Australia bought green beans from <strong>49 countries</strong> and spent more than
+              <strong>A$660 million</strong> on the raw crop, before a single bean was roasted.
+            </p>
+            <p>The map traces where those beans grow, clustered in the narrow equatorial belt between the
+              Tropics of Cancer and Capricorn, and how they converge on one city. The origins are not
+              interchangeable. Some send Australia bulk tonnage, others a smaller volume worth far more a
+              kilogram. <span class="ref">(World Bank WITS, 2023)</span></p>
+          </div>
+          <div class="c5">
+            <div class="callout">
+              <div class="big">49</div>
+              <div class="cap">countries supplied green coffee beans to Australia in 2023</div>
+              <span class="cite">Source: UN Comtrade via World Bank WITS, 2023.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="card featured c12">
+            <p class="ctitle">The journey of a Melbourne coffee bean</p>
+            <p class="csub">Where Australia's green (unroasted) beans are grown, and how they flow to Melbourne. Line
+              thickness and glow show import value, 2023.</p>
+            <div class="viz" role="img"
+              aria-label="World flow map: coffee-growing countries glow by import value, with lines flowing to Melbourne.">
+              <div id="chart1a"></div>
+            </div>
+            <p class="csource">Source: UN Comtrade via World Bank WITS, HS&nbsp;090111 (coffee, not roasted).</p>
+          </div>
+        </div>
+
+        <div class="row swap">
+          <div class="text c5">
+            <p class="kicker">Growers vs suppliers</p>
+            <h3>The fourth-biggest supplier is a small grower</h3>
+            <p>Papua New Guinea is only the world's <strong>17th-largest producer</strong>, farming
+              roughly 930,000 bags a year, yet it is Australia's <strong>fourth-largest supplier by
+                value</strong>. The slope chart shows its line climbing across far bigger growers as it
+              moves from producer rank to supplier rank. Distance explains the jump: at about
+              <strong>3,500 km</strong> from Melbourne, PNG is the closest major origin, and the shorter
+              shipping line undercuts Latin America on freight and transit time.
+            </p>
+            <p>Vietnam is the mirror image. The world's <strong>second-largest producer</strong> at over
+              31 million bags a year, more than thirty times PNG's output, it ranks only fifth as a
+              supplier here. Its robusta crop mostly feeds instant-coffee factories in Europe and Asia,
+              not a market built on specialty arabica. <span class="ref">(International Coffee Organization, 2018; World
+                Bank WITS, 2023)</span></p>
+            <div class="callout">
+              <div class="big">3,500 km</div>
+              <div class="cap">PNG is the shortest supply line of Australia's major coffee origins</div>
+            </div>
+          </div>
+          <div class="card c7">
+            <p class="ctitle">Closeness can matter more than scale</p>
+            <p class="csub">Each country's rank as a world producer (left) vs as a supplier to Australia (right).
+              Crossing lines show the mismatch.</p>
+            <div class="viz" role="img"
+              aria-label="Slope chart connecting each country's world-producer rank to its rank as an Australian supplier.">
+              <div id="chart1c"></div>
+            </div>
+            <p class="csource">Sources: International Coffee Organization (production) &amp; World Bank WITS (imports).
+            </p>
+          </div>
+        </div>
+
+        <div class="takeaway">
+          <span class="tlabel">The takeaway</span>
+          <p>Brazil anchors the supply chain at more than a quarter of imports by value, but trade does
+            not simply track production scale: <strong>Papua New Guinea ranks fourth as a supplier on
+              proximity, not output</strong>. Those forty-nine origins feed a national industry whose
+            place in the world looks nothing like its café-famous reputation.
+            <span class="ref">(World Bank WITS, 2023)</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= CHAPTER 2 ============ -->
+    <section class="chapter tint">
+      <div class="band band--medium">
+        <div class="frame">
+          <span class="band-num">02</span>
+          <span class="band-label">Australia in the World</span>
+          <h2 class="band-title">A big reputation, a light habit</h2>
+        </div>
+      </div>
+      <div class="frame">
+
+        <div class="row">
+          <div class="text c7">
+            <p class="dropcap"><strong>Those beans feed a far bigger story than a morning cup.</strong>
+              Australia's cafés, restaurants and takeaway venues turn over more than
+              <strong>$66 billion a year</strong> and employ close to <strong>700,000 people</strong>,
+              making hospitality one of the country's largest private employers. The country that once
+              only bought green beans now earns a growing premium <strong>selling the craft back</strong>,
+              exporting the specialty-roasting style its cafés helped define.</p>
+            <p>Yet Australians are not heavy coffee drinkers. At <strong>4.6 kilograms a head a
+                year</strong> the country sits near the bottom of the coffee-drinking nations, below
+              Brazil, Italy and Germany, not just the Nordic leaders. The reputation rests on how the
+              coffee is made, not how much is poured. <span class="ref">(DFAT, 2025; International Coffee
+                Organization, 2023; ABS, 2024)</span></p>
+          </div>
+          <div class="c5">
+            <div class="callout">
+              <div class="big">696,600</div>
+              <div class="cap">people employed in Australia's cafés, restaurants and takeaway food
+                services</div>
+              <span class="cite">Source: ABS Labour Force / Retail Trade.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row swap">
+          <div class="text c5">
+            <p class="kicker">From importer to exporter</p>
+            <h3>Australia now roasts for the world</h3>
+            <p>Earnings from roasted coffee and coffee products rose from <strong>A$48 million in 2006
+                to A$147 million in 2025</strong>, and the curve steepens at the end. It took fifteen years
+              to clear A$86 million in 2021; the next four years added another A$60 million, with a single
+              <strong>24 per cent jump in 2023</strong>. Other countries are now paying a premium for the
+              specialty-roasting style Melbourne helped define, turning a one-time pure importer into an
+              exporter of the craft. <span class="ref">(DFAT, 2025)</span>
+            </p>
+            <div class="callout">
+              <div class="big">A$147M</div>
+              <div class="cap">coffee export value in 2025, up from A$48M in 2006</div>
+            </div>
+          </div>
+          <div class="card c7">
+            <p class="ctitle">Australia's roasted coffee export boom</p>
+            <p class="csub">Value of roasted coffee &amp; coffee-product exports, 2006–2025 (A$ millions). Gold = growth
+              year; red = contraction.</p>
+            <div class="viz" role="img"
+              aria-label="Bar chart of Australian roasted coffee export value rising from A$48M in 2006 to A$147M in 2025, with year-on-year growth colour coded.">
+              <div id="chart1d"></div>
+            </div>
+            <p class="csource">Source: DFAT trade pivot tables (ABS catalogue 5368.0), HS&nbsp;0901.2 (roasted coffee) +
+              Chapter&nbsp;21 (coffee extracts).</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="text c5">
+            <p class="kicker">Reputation versus reality</p>
+            <h3>A big reputation, a light habit</h3>
+            <p>Finland drinks <strong>12 kilograms a person a year</strong> and the Nordic countries fill
+              the top of the table, but Brazil (5.8) and Italy (5.2) sit comfortably above Australia too.
+              At <strong>4.6 kilograms</strong>, Australia ranks third from last of the eighteen nations
+              shown, ahead of only the United States and the United Kingdom.</p>
+            <p>It is a sharp corrective. Melbourne's coffee fame rests on <strong>how</strong> the coffee
+              is made and served, not on how much of it the country drinks.
+              <span class="ref">(International Coffee Organization, 2023)</span>
+            </p>
+          </div>
+          <div class="card c7">
+            <p class="ctitle">A big reputation, a light habit</p>
+            <p class="csub">Coffee consumed per person per year, kilograms, selected countries.</p>
+            <div class="viz" role="img"
+              aria-label="Ranked lollipop chart of per-capita coffee consumption by country, with Australia highlighted below the Nordic leaders.">
+              <div id="chart6a"></div>
+            </div>
+            <p class="csource">Source: International Coffee Organization and public consumption estimates.</p>
+          </div>
+        </div>
+
+        <div class="takeaway">
+          <span class="tlabel">The takeaway</span>
+          <p>Australia drinks less per head than Brazil, Italy, even Germany, yet runs a
+            <strong>$66 billion café industry</strong> and now exports its roasting craft for
+            <strong>A$147 million a year</strong>. The edge was never volume; it is craft. And nowhere is
+            that craft more concentrated than in Melbourne, where the next chapter begins.
+            <span class="ref">(ABS, 2024; DFAT, 2025; International Coffee Organization, 2023)</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= CHAPTER 3 ============ -->
+    <section class="chapter">
+      <div class="band band--accent">
+        <div class="frame">
+          <span class="band-num">03</span>
+          <span class="band-label">The Melbourne Boom</span>
+          <h2 class="band-title">Twenty years, double the cafés</h2>
+        </div>
+      </div>
+      <div class="frame">
+
+        <div class="row">
+          <div class="text c5">
+            <p class="dropcap"><strong>Once the beans land, the city takes over.</strong>
+              The City of Melbourne has counted every café and restaurant each year since 2002, an unbroken
+              twenty-two-year record. The count rose from <strong>886 in 2002 to a peak of 1,771 in
+                2019</strong>, fell through the closures of 2020 to 2022, and has been rebuilding since.</p>
+            <p>The headline hides two quieter shifts. The growth years were not evenly spaced, and as the
+              city added cafés the average café got smaller. The next two charts take each apart.
+              <span class="ref">(City of Melbourne, 2024)</span>
+            </p>
+            <div class="callout">
+              <div class="big">+86%</div>
+              <div class="cap">growth in central Melbourne café count from 2002 to 2024</div>
+              <span class="cite">Source: City of Melbourne CLUE census.</span>
+            </div>
+          </div>
+          <div class="card featured c7">
+            <p class="ctitle">Melbourne's cafés nearly doubled in twenty years</p>
+            <p class="csub">Number of cafés &amp; restaurants in the City of Melbourne, 2002–2024.</p>
+            <div class="viz" role="img"
+              aria-label="Area and line timeline of Melbourne café numbers rising from 2002 to a 2019 peak then recovering.">
+              <div id="chart2a"></div>
+            </div>
+            <p class="csource">Source: City of Melbourne CLUE census.</p>
+          </div>
+        </div>
+
+        <div class="row swap">
+          <div class="text c5">
+            <p class="kicker">Two curves, opposite directions</p>
+            <h3>More cafés, but smaller ones</h3>
+            <p>The bars count cafés each year, rising from <strong>886 in 2002</strong> to
+              <strong>1,771 in 2019</strong> before the closures cut in. The red line, read off the right
+              axis, runs the other way: average size fell from <strong>96 seats</strong> in 2002 to
+              <strong>79</strong> by 2024.
+            </p>
+            <p>The scene did not scale up by building bigger rooms. It scaled out by building more of
+              them, and smaller. Specialty coffee rewards a focused 30-seat room with one machine and a
+              regular crowd over a 120-seat function space. Repeated across two decades, that preference
+              dragged the average down even as the count climbed.
+              <span class="ref">(City of Melbourne, 2024)</span>
+            </p>
+            <div class="callout">
+              <div class="big">96 → 79</div>
+              <div class="cap">average seats per café, 2002 to 2024</div>
+            </div>
+          </div>
+          <div class="card c7">
+            <p class="ctitle">More cafés, but smaller ones</p>
+            <p class="csub">Bars show total café count (left axis); red line shows average seats per café (right axis),
+              2002–2024. Hover any bar or point for exact figures.</p>
+            <div class="viz-row">
+              <div class="viz" role="img"
+                aria-label="Dual-axis chart: bars show rising café count 2002–2024; red line shows average seats per café declining from 96 to 79 over the same period.">
+                <div id="chart2b"></div>
+              </div>
+              <div class="chart-legend">
+                <div class="legend-item"><span class="legend-swatch--bar"></span>Number of cafés</div>
+                <div class="legend-item"><span class="legend-swatch--line"></span>Avg seats per café</div>
+              </div>
+            </div>
+            <p class="csource">Source: City of Melbourne CLUE census.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="text c5">
+            <p class="kicker">Year by year</p>
+            <h3>The boom came in bursts, not a steady climb</h3>
+            <p>The 22-year average of about <strong>4 per cent growth a year</strong> hides a wide
+              spread. The fastest single year was <strong>2005 at +8.6 per cent</strong>, with 2013
+              (+7.8%) and 2009 (+7.2%) close behind. By 2017 the pace had already slowed to under
+              1 per cent a year, well before the 2020 closures hit.</p>
+            <p>Three straight years of contraction, 2020 to 2022, erased almost a decade of gains. The
+              rebound since is real but partial: at <strong>1,645 cafés in 2024</strong> the city is
+              still short of its 2019 peak of 1,771. <span class="ref">(City of Melbourne, 2024)</span></p>
+            <div class="callout">
+              <div class="big">2005</div>
+              <div class="cap">the single fastest year on record: +8.6%, with 81 net cafés added in twelve months</div>
+              <span class="cite">Source: City of Melbourne CLUE census.</span>
+            </div>
+            <div class="callout">
+              <div class="big">2020</div>
+              <div class="cap">the worst year: −6.9% as pandemic restrictions closed 122 venues in a single census</div>
+              <span class="cite">Source: City of Melbourne CLUE census.</span>
+            </div>
+          </div>
+          <div class="card c7">
+            <p class="ctitle">Annual growth rate in Melbourne café count, 2003–2024</p>
+            <p class="csub">Year-on-year percentage change in total café count. Gold bars show growth years; red bars
+              show contraction. The steepest drop (2020) reflects pandemic venue closures.</p>
+            <div class="viz" role="img"
+              aria-label="Diverging bar chart of year-on-year café count growth rate 2003–2024; gold bars show growth years peaking at 2005 (+8.6%), red bars show contraction years with 2020 the worst at −6.9% due to pandemic closures.">
+              <div id="chart2c"></div>
+            </div>
+            <p class="csource">Source: City of Melbourne CLUE census.</p>
+          </div>
+        </div>
+
+        <div class="takeaway">
+          <span class="tlabel">The takeaway</span>
+          <p>Melbourne's café scene grew almost without pause for two decades to a
+            <strong>2019 peak of 1,771</strong>. As it grew the typical café shrank from 96 seats to 79,
+            <strong>smaller and more specialised</strong>. And the growth was lumpy: a few standout years,
+            led by 2005, drove most of the net gain. <span class="ref">(City of Melbourne, 2024)</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= CHAPTER 4 ============ -->
+    <section class="chapter tint">
+      <div class="band band--gold">
+        <div class="frame">
+          <span class="band-num">04</span>
+          <span class="band-label">The Neighbourhood</span>
+          <h2 class="band-title">Where coffee took root</h2>
+        </div>
+      </div>
+      <div class="frame">
+
+        <div class="row">
+          <div class="text c7">
+            <p class="dropcap"><strong>Cafés did not spread evenly.</strong>
+              The census's closest measure of coffee venues is its "cafés and restaurants" category, so every
+              count here is the best available proxy for the city's coffee scene. Each of central Melbourne's
+              inner-city areas grew its own coffee character, shaped by street grid, residents and history. The
+              CBD stands alone: at <strong>383 venues per square kilometre</strong> it is nearly five times
+              denser than the next area in line.</p>
+            <p>Density is only part of it. Some areas climbed the rankings over twenty years while
+              others slipped, and the mix of many small venues against a few large ones swings sharply
+              from one to the next. The three charts in this chapter read the same map three ways.
+              <span class="ref">(City of Melbourne, 2024)</span>
+            </p>
+          </div>
+          <div class="c5">
+            <div class="callout">
+              <div class="big">383</div>
+              <div class="cap">venues per km² in the CBD — the most intensely caffeinated area in the city</div>
+              <span class="cite">Source: City of Melbourne CLUE census, 2024.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="card c12">
+            <p class="ctitle">Melbourne's coffee map</p>
+            <p class="csub">Every café and restaurant location in central Melbourne, 2024. Each dot is one street
+              address, sized by the seating it holds. Because a single building can house several venues, the map plots
+              fewer dots than the 383-per-square-kilometre venue density above. Hover to see a location's name, how many
+              venues share the address, and its seats.</p>
+            <div class="viz" role="img"
+              aria-label="Dot map of central Melbourne showing café and restaurant addresses as circles over the city's property-parcel fabric; the CBD forms the densest cluster. Dot size encodes the seating held at each address.">
+              <div id="chart3a"></div>
+            </div>
+            <p class="csource">Sources: City of Melbourne CLUE census &amp; City of Melbourne property boundaries.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="text c5">
+            <p class="kicker">The scene grew and reshuffled</p>
+            <h3>Docklands climbed the ranks</h3>
+            <p>Melbourne's count of these venues <strong>nearly doubled from 886 in 2002 to 1,645 in
+                2024</strong>, and the ranking reshuffled underneath that growth. Docklands shows it most
+              sharply: <strong>13 venues and eighth place in 2002, 157 and third by 2024</strong>, an
+              elevenfold rise. Two decades of waterfront construction pulled tens of thousands of workers and
+              residents in, and new venues followed them. The bump chart traces every area's rank year by year: most
+              lines hold roughly flat, Docklands cuts upward across all of them, and the CBD never once
+              loses first place. <span class="ref">(City of Melbourne, 2024)</span>
+            </p>
+            <div class="callout">
+              <div class="big">13 → 157</div>
+              <div class="cap">Docklands venue count, 2002 to 2024</div>
+            </div>
+          </div>
+          <div class="card c7">
+            <p class="ctitle">Docklands climbed the ranks</p>
+            <p class="csub">All 13 City of Melbourne areas ranked by venue count (cafés and restaurants, the
+              census's closest category to coffee venues), 2004–2024 (rank 1 = most). Four key areas highlighted in
+              colour; remaining areas labelled in grey.</p>
+            <div class="viz" role="img"
+              aria-label="Bump chart of area rankings by café count over time, Docklands rising.">
+              <div id="chart3b"></div>
+            </div>
+            <p class="csource">Source: City of Melbourne CLUE census.</p>
+          </div>
+        </div>
+
+        <div class="row swap">
+          <div class="text c5">
+            <p class="kicker">Many small, or a few large?</p>
+            <h3>A few areas go big; most stay small</h3>
+            <p>Each area takes a different shape. Southbank runs <strong>125 venues</strong>, about a
+              seventh of the CBD's count, yet they seat <strong>129 each on average</strong> against the
+              CBD's 76. The bubble chart positions every area by venue count and average size, with bubble
+              area set by total seating. Southbank sits top-left, venues built for volume: riverside terraces
+              and arts-district dining rooms that
+              fill before a show and turn over fast. The CBD sits bottom-right on the opposite logic,
+              small focused rooms packed at extreme density.
+              <span class="ref">(City of Melbourne, 2024)</span>
+            </p>
+            <div class="callout">
+              <div class="big">129 vs 76</div>
+              <div class="cap">average seats per venue: Southbank vs the CBD</div>
+            </div>
+          </div>
+          <div class="card c7">
+            <p class="ctitle">A few areas go big; most stay small</p>
+            <p class="csub">Venue count vs average venue size by area; bubble = total seats (2024). Venues = cafés
+              and restaurants, the census's closest category to coffee venues.</p>
+            <div class="viz" role="img"
+              aria-label="Bubble scatterplot of café count against average café size by area, bubble sized by total seats.">
+              <div id="chart3c"></div>
+            </div>
+            <p class="csource">Source: City of Melbourne CLUE census, 2024.</p>
+          </div>
+        </div>
+
+        <div class="takeaway">
+          <span class="tlabel">The takeaway</span>
+          <p>Coffee clusters hardest in the <strong>CBD</strong>, denser than anywhere else, but the
+            map keeps moving. <strong>Docklands grew from 13 venues to 157</strong> in two decades, one of
+            the city's sharpest neighbourhood shifts. Southbank stays <strong>few but oversized</strong>,
+            and Carlton holds second place on count year after year on its student trade.
+            <span class="ref">(City of Melbourne, 2024)</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= CHAPTER 5 ============ -->
+    <section class="chapter">
+      <div class="band band--dark">
+        <div class="frame">
+          <span class="band-num">05</span>
+          <span class="band-label">The Price of Your Cup</span>
+          <h2 class="band-title">What a cup now costs</h2>
+        </div>
+      </div>
+      <div class="frame">
+
+        <div class="row">
+          <div class="text c7">
+            <p class="dropcap"><strong>Bean prices exploded. The cup did not keep up.</strong>
+              The same Brazilian farms that opened this story were hit by drought through 2024 and 2025,
+              pushing the world price of green coffee to the <strong>highest level ever recorded</strong>,
+              robusta up about <strong>169 per cent</strong> on its 2015 level at the peak. A flat white
+              that ran about $3.50 a decade ago now rarely lands under $5.50, a real rise, but a far
+              gentler one than the bean shock behind it.
+            </p>
+            <p>Bean prices and the price Australians pay do not move together. Over the same decade
+              Australian retail coffee climbed only about <strong>72 per cent</strong>, slowly and
+              smoothly, while beans lurched. The reason is on the receipt: green coffee is only a small
+              slice of what a cup costs, so even a record bean price reaches the counter softened by
+              roasting, wages, rent and milk.
+              <span class="ref">(FRED, 2025; ABS, 2025)</span>
+            </p>
+          </div>
+          <div class="c5">
+            <div class="callout">
+              <div class="big">A$13.90/kg</div>
+              <div class="cap">the highest monthly global coffee price on record (US$4.10/lb), reached in 2025 as
+                drought gripped Brazil</div>
+              <span class="cite">Source: FRED / IMF global coffee price (Other Mild Arabica), monthly. Converted at A$1
+                = US$0.65.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="card featured c12">
+            <p class="ctitle">The bean shock the cup never fully felt</p>
+            <p class="csub">Cumulative price change since January 2015. Global green beans rose far faster than
+              Australian retail coffee.
+            </p>
+            <div class="viz" role="img"
+              aria-label="Line chart comparing the percentage price change in global arabica and robusta beans with Australian retail coffee since 2015.">
+              <div id="chart5a"></div>
+            </div>
+            <p class="csource">Source: FRED / IMF (arabica, robusta) and ABS CPI, coffee, tea &amp; cocoa.</p>
+          </div>
+        </div>
+
+        <div class="row swap">
+          <div class="text c5">
+            <p class="kicker">Thirty years of prices, one record high</p>
+            <h3>2025 broke the record</h3>
+            <p>Coffee has always been a volatile crop. Brazilian frosts and droughts sent prices soaring
+              in <strong>1997</strong> and again in <strong>2011</strong>. The spike that began in 2024
+              went further, pushing the global arabica price <strong>past every previous peak in the
+                modern record</strong> on drought in Brazil and tight supply from Vietnam.</p>
+            <p>The long view is the point. This is not an ordinary rise off a low base; it is the most
+              expensive coffee has ever been on the world market.
+              <span class="ref">(FRED, 2025)</span>
+            </p>
+            <div class="pull">Not a normal price rise. A record.</div>
+          </div>
+          <div class="card c7">
+            <p class="ctitle">The highest coffee price on record</p>
+            <p class="csub">Global arabica price, A$ per kilo, monthly since 1992.</p>
+            <div class="viz" role="img"
+              aria-label="Area chart of the global arabica coffee price since 1992, with the 2025 record high highlighted.">
+              <div id="chart5b"></div>
+            </div>
+            <p class="csource">Source: FRED / IMF global coffee price (Other Mild Arabica). Converted at A$1 = US$0.65.
+            </p>
+          </div>
+        </div>
+
+        <div class="takeaway">
+          <span class="tlabel">The takeaway</span>
+          <p>The price of a cup is set far from the café, but it does not track the bean. Drought in
+            <strong>Brazil</strong>, the origin that opened this story, pushed the global bean price to a
+            <strong>record in 2025</strong>, yet Australian retail coffee rose only about
+            <strong>72 per cent</strong> over the decade against beans' <strong>169 per cent</strong>
+            peak. Green coffee is the smallest line on the receipt, so the café absorbs most of the shock
+            before it ever reaches your cup. <span class="ref">(FRED, 2025; ABS, 2025)</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= CHAPTER 6 ============ -->
+    <section class="chapter tint">
+      <div class="band band--accent">
+        <div class="frame">
+          <span class="band-num">06</span>
+          <span class="band-label">The Cost Behind the Counter</span>
+          <h2 class="band-title">Where your $5.50 goes</h2>
+        </div>
+      </div>
+      <div class="frame">
+
+        <div class="row">
+          <div class="text c5">
+            <p class="dropcap"><strong>Five fifty sounds like a lot for a coffee.</strong>
+              Split across what actually goes into the cup, it is surprisingly little. The beans that
+              crossed the world are one of the smallest lines at <strong>56 cents</strong>. Labour and
+              rent dominate: together they take <strong>$2.65</strong>, nearly half the cup and almost
+              five times the cost of the beans.</p>
+            <p>On industry estimates the café keeps a net margin of about <strong>7.6 per cent</strong>,
+              roughly 42 cents a cup, well below the average Australian business. On these numbers the
+              flat white is a thin-margin product. <span class="ref">(ATO, 2024)</span></p>
+            <div class="callout">
+              <div class="big">56&cent;</div>
+              <div class="cap">the cost of the coffee beans in a $5.50 flat white, about a tenth of the
+                price</div>
+              <span class="cite">Estimate: ATO benchmarks + UniSA / Pablo &amp; Rusty's.</span>
+            </div>
+          </div>
+          <div class="card c7">
+            <p class="ctitle">Where your $5.50 flat white goes</p>
+            <p class="csub">Estimated cost breakdown per cup, drawn as a coffee mug seen from above. An illustrative
+              estimate built from published benchmarks, not one café's accounts. Beans are one of the smallest slices;
+              labour and rent dominate.</p>
+            <div class="viz" role="img"
+              aria-label="Donut chart shaped like a coffee mug, breaking a $5.50 flat white into beans, milk, cup, labour, rent, tax and a small net profit, with the café keeping about 8 per cent.">
+              <div id="chart7a"></div>
+            </div>
+            <p class="csource">Estimate combining ATO coffee-shop benchmarks with the UniSA / Pablo &amp; Rusty's
+              per-cup breakdown.</p>
+          </div>
+        </div>
+
+        <div class="row swap">
+          <div class="text c5">
+            <p class="kicker">A broad-based squeeze</p>
+            <h3>Every input got dearer</h3>
+            <p>No single villain drove the $3.50 cup to $5.50. Between about 2019 and 2025 the
+              <strong>beans nearly doubled (+75%)</strong>, the steepest rise of any input, while
+              <strong>milk rose a third</strong> and wages and rent climbed around a quarter each. In
+              dollars the order flips: the extra labour added <strong>30 cents</strong> to the cup, more
+              than the extra beans' 24. Every input pushed up at once.
+            </p>
+            <p>That is why cafés lifted prices and still kept little. Their own costs rose almost as fast
+              as the menu board. <span class="ref">(FRED, 2025; ABS, 2025)</span></p>
+            <div class="pull">From a bean on the equator to the price you pay at the counter.</div>
+          </div>
+          <div class="card c7">
+            <p class="ctitle">The squeeze, component by component</p>
+            <p class="csub">An illustrative estimate of a flat white's input costs, about 2019 versus about 2025, A$,
+              built from published price and wage indices.</p>
+            <div class="viz" role="img"
+              aria-label="Grouped bar chart comparing the estimated 2019 and 2025 cost of a flat white's beans, milk, labour and rent, with the percentage rise of each input.">
+              <div id="chart7b"></div>
+            </div>
+            <p class="csource">Estimate derived from global bean prices and ABS milk and wage indices.</p>
+          </div>
+        </div>
+
+        <div class="intro">
+          <p class="lede">From bean to cup to the price you pay, a city's story told in data.</p>
+          <p>Six chapters trace a single supply chain from origin to receipt. A handful of equatorial
+            farms, led by Brazil, grow the beans that feed a $66 billion national industry, one that
+            drinks little per head yet exports its craft to the world. A concentration of roasters in one
+            of the most café-dense districts anywhere turns those beans into something with a distinct
+            character, and a twenty-year market transformation filled every neighbourhood with smaller,
+            more focused venues. And in the end, a global price shock works its way from the farm to the
+            counter, landing in a $5.50 cup that the café barely profits from. Melbourne did not inherit
+            its coffee culture. It built it, incrementally, over the better part of three decades.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= COLOPHON ============ -->
+    <footer class="colophon">
+      <div class="frame">
+        <h2>About this visualisation</h2>
+        <div class="grid">
+          <div>
+            <h3>Why &amp; Who</h3>
+            <p>Designed for a general Australian audience that consumes coffee daily but has little
+              visibility into the supply chain behind it. The aim is to turn scattered public records
+              into a coherent story: from the farms that grow the beans to the streets that absorb
+              the morning rush.</p>
+          </div>
+          <div>
+            <h3>What &amp; How</h3>
+            <p>Public datasets from Australian and international government and trade sources,
+              aggregated into lightweight CSV files and visualised with fifteen Vega-Lite charts:
+              a world flow map and a city dot map over Melbourne's property-parcel fabric (the two
+              required maps), alongside ranked bar charts, a slope chart, a diverging-bar growth
+              chart, an area-and-line timeline, a dual-axis count-and-size chart, a bump chart, a
+              bubble scatter, an indexed multi-line price chart, a long-run price area, a ranked
+              lollipop, a coffee-mug donut and a grouped before-and-after bar. Each idiom was
+              chosen to surface a specific insight the underlying data makes legible.</p>
+          </div>
+          <div>
+            <h3>Data sources</h3>
+            <ul>
+              <li>City of Melbourne — <a
+                  href="https://data.melbourne.vic.gov.au/explore/dataset/cafes-and-restaurants-with-seating-capacity/">Café
+                  &amp; restaurant seating (CLUE)</a></li>
+              <li><a href="https://wits.worldbank.org/">UN Comtrade via World Bank WITS</a> — coffee imports</li>
+              <li><a
+                  href="https://www.dfat.gov.au/trade/trade-and-investment-data-information-and-publications/trade-statistics/trade-statistical-pivot-tables">DFAT
+                  / ABS</a> — coffee exports</li>
+              <li><a href="https://ico.org/">International Coffee Organization</a> — world production &amp; consumption
+              </li>
+              <li><a href="https://fred.stlouisfed.org/series/PCOFFOTMUSDM">FRED / IMF</a> — global coffee prices</li>
+              <li><a
+                  href="https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release">ABS</a>
+                — CPI &amp; café turnover</li>
+              <li><a
+                  href="https://www.ato.gov.au/businesses-and-organisations/income-deductions-and-concessions/small-business-benchmarks/in-detail/coffee-shops">ATO</a>
+                — coffee-shop cost benchmarks</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Credits</h3>
+            <p>Author: <strong>Eugene Ooi</strong> · June 2026 · Monash University FIT2179.<br>
+              World map boundaries from the Vega Datasets project.<br>
+              Generative AI (Claude) assisted with data aggregation, coding, and copy-editing of the
+              narrative text.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="js/shared.js"></script>
+  <script src="js/chart1a.js"></script>
+  <script src="js/chart1c.js"></script>
+  <script src="js/chart1d.js"></script>
+  <script src="js/chart2a.js"></script>
+  <script src="js/chart2b.js"></script>
+  <script src="js/chart2c.js"></script>
+  <script src="js/chart3a.js"></script>
+  <script src="js/chart3b.js"></script>
+  <script src="js/chart3c.js"></script>
+  <script src="js/chart5a.js"></script>
+  <script src="js/chart5b.js"></script>
+  <script src="js/chart6a.js"></script>
+  <script src="js/chart7a.js"></script>
+  <script src="js/chart7b.js"></script>
+  <script src="js/render.js"></script>
+</body>
+
+</html>

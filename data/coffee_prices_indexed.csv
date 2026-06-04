@@ -1,0 +1,404 @@
+date,series,index
+2015-01-01,Arabica (global),100.0
+2015-02-01,Arabica (global),94.3
+2015-03-01,Arabica (global),84.8
+2015-04-01,Arabica (global),86.5
+2015-05-01,Arabica (global),83.6
+2015-06-01,Arabica (global),84.2
+2015-07-01,Arabica (global),81.4
+2015-08-01,Arabica (global),82.8
+2015-09-01,Arabica (global),77.1
+2015-10-01,Arabica (global),80.8
+2015-11-01,Arabica (global),78.0
+2015-12-01,Arabica (global),78.4
+2016-01-01,Arabica (global),76.7
+2016-02-01,Arabica (global),77.9
+2016-03-01,Arabica (global),83.1
+2016-04-01,Arabica (global),81.3
+2016-05-01,Arabica (global),81.8
+2016-06-01,Arabica (global),87.3
+2016-07-01,Arabica (global),90.6
+2016-08-01,Arabica (global),88.4
+2016-09-01,Arabica (global),93.0
+2016-10-01,Arabica (global),94.4
+2016-11-01,Arabica (global),97.1
+2016-12-01,Arabica (global),85.3
+2017-01-01,Arabica (global),88.9
+2017-02-01,Arabica (global),87.7
+2017-03-01,Arabica (global),84.5
+2017-04-01,Arabica (global),82.0
+2017-05-01,Arabica (global),79.1
+2017-06-01,Arabica (global),75.5
+2017-07-01,Arabica (global),79.0
+2017-08-01,Arabica (global),79.0
+2017-09-01,Arabica (global),77.3
+2017-10-01,Arabica (global),74.2
+2017-11-01,Arabica (global),74.3
+2017-12-01,Arabica (global),72.4
+2018-01-01,Arabica (global),73.2
+2018-02-01,Arabica (global),71.9
+2018-03-01,Arabica (global),71.2
+2018-04-01,Arabica (global),70.8
+2018-05-01,Arabica (global),71.5
+2018-06-01,Arabica (global),70.7
+2018-07-01,Arabica (global),68.9
+2018-08-01,Arabica (global),66.0
+2018-09-01,Arabica (global),63.9
+2018-10-01,Arabica (global),72.4
+2018-11-01,Arabica (global),72.3
+2018-12-01,Arabica (global),67.0
+2019-01-01,Arabica (global),67.7
+2019-02-01,Arabica (global),67.7
+2019-03-01,Arabica (global),65.3
+2019-04-01,Arabica (global),63.8
+2019-05-01,Arabica (global),63.6
+2019-06-01,Arabica (global),68.4
+2019-07-01,Arabica (global),71.4
+2019-08-01,Arabica (global),66.6
+2019-09-01,Arabica (global),68.0
+2019-10-01,Arabica (global),67.0
+2019-11-01,Arabica (global),74.3
+2019-12-01,Arabica (global),82.3
+2020-01-01,Arabica (global),75.4
+2020-02-01,Arabica (global),71.5
+2020-03-01,Arabica (global),78.2
+2020-04-01,Arabica (global),81.5
+2020-05-01,Arabica (global),79.1
+2020-06-01,Arabica (global),74.6
+2020-07-01,Arabica (global),77.4
+2020-08-01,Arabica (global),86.0
+2020-09-01,Arabica (global),87.8
+2020-10-01,Arabica (global),80.2
+2020-11-01,Arabica (global),79.5
+2020-12-01,Arabica (global),83.3
+2021-01-01,Arabica (global),84.8
+2021-02-01,Arabica (global),87.8
+2021-03-01,Arabica (global),88.1
+2021-04-01,Arabica (global),88.9
+2021-05-01,Arabica (global),98.3
+2021-06-01,Arabica (global),101.3
+2021-07-01,Arabica (global),107.8
+2021-08-01,Arabica (global),114.1
+2021-09-01,Arabica (global),118.9
+2021-10-01,Arabica (global),127.1
+2021-11-01,Arabica (global),136.6
+2021-12-01,Arabica (global),141.5
+2022-01-01,Arabica (global),143.0
+2022-02-01,Arabica (global),147.6
+2022-03-01,Arabica (global),136.6
+2022-04-01,Arabica (global),140.0
+2022-05-01,Arabica (global),137.3
+2022-06-01,Arabica (global),144.4
+2022-07-01,Arabica (global),135.0
+2022-08-01,Arabica (global),141.6
+2022-09-01,Arabica (global),141.1
+2022-10-01,Arabica (global),126.6
+2022-11-01,Arabica (global),112.7
+2022-12-01,Arabica (global),110.9
+2023-01-01,Arabica (global),109.0
+2023-02-01,Arabica (global),121.0
+2023-03-01,Arabica (global),117.4
+2023-04-01,Arabica (global),121.3
+2023-05-01,Arabica (global),116.1
+2023-06-01,Arabica (global),109.4
+2023-07-01,Arabica (global),102.0
+2023-08-01,Arabica (global),98.3
+2023-09-01,Arabica (global),96.8
+2023-10-01,Arabica (global),97.0
+2023-11-01,Arabica (global),104.1
+2023-12-01,Arabica (global),110.9
+2024-01-01,Arabica (global),107.5
+2024-02-01,Arabica (global),110.1
+2024-03-01,Arabica (global),110.2
+2024-04-01,Arabica (global),126.5
+2024-05-01,Arabica (global),122.5
+2024-06-01,Arabica (global),131.0
+2024-07-01,Arabica (global),135.6
+2024-08-01,Arabica (global),137.9
+2024-09-01,Arabica (global),147.0
+2024-10-01,Arabica (global),146.0
+2024-11-01,Arabica (global),160.8
+2024-12-01,Arabica (global),181.5
+2025-01-01,Arabica (global),186.6
+2025-02-01,Arabica (global),216.0
+2025-03-01,Arabica (global),213.2
+2025-04-01,Arabica (global),207.2
+2025-05-01,Arabica (global),209.7
+2025-06-01,Arabica (global),191.5
+2025-07-01,Arabica (global),167.0
+2025-08-01,Arabica (global),192.8
+2025-09-01,Arabica (global),210.7
+2025-10-01,Arabica (global),212.9
+2025-11-01,Arabica (global),216.0
+2025-12-01,Arabica (global),200.6
+2026-01-01,Arabica (global),191.9
+2026-02-01,Arabica (global),169.5
+2026-03-01,Arabica (global),176.2
+2015-01-01,Robusta (global),100.0
+2015-02-01,Robusta (global),100.5
+2015-03-01,Robusta (global),94.2
+2015-04-01,Robusta (global),94.0
+2015-05-01,Robusta (global),89.4
+2015-06-01,Robusta (global),92.2
+2015-07-01,Robusta (global),89.0
+2015-08-01,Robusta (global),87.6
+2015-09-01,Robusta (global),83.3
+2015-10-01,Robusta (global),84.6
+2015-11-01,Robusta (global),83.5
+2015-12-01,Robusta (global),81.0
+2016-01-01,Robusta (global),76.5
+2016-02-01,Robusta (global),75.6
+2016-03-01,Robusta (global),77.3
+2016-04-01,Robusta (global),81.9
+2016-05-01,Robusta (global),85.7
+2016-06-01,Robusta (global),87.8
+2016-07-01,Robusta (global),92.8
+2016-08-01,Robusta (global),93.8
+2016-09-01,Robusta (global),99.0
+2016-10-01,Robusta (global),105.9
+2016-11-01,Robusta (global),106.0
+2016-12-01,Robusta (global),104.1
+2017-01-01,Robusta (global),110.7
+2017-02-01,Robusta (global),108.8
+2017-03-01,Robusta (global),109.0
+2017-04-01,Robusta (global),106.0
+2017-05-01,Robusta (global),100.5
+2017-06-01,Robusta (global),104.1
+2017-07-01,Robusta (global),107.2
+2017-08-01,Robusta (global),106.8
+2017-09-01,Robusta (global),101.3
+2017-10-01,Robusta (global),100.5
+2017-11-01,Robusta (global),93.3
+2017-12-01,Robusta (global),89.5
+2018-01-01,Robusta (global),90.5
+2018-02-01,Robusta (global),91.1
+2018-03-01,Robusta (global),90.0
+2018-04-01,Robusta (global),90.2
+2018-05-01,Robusta (global),90.7
+2018-06-01,Robusta (global),87.9
+2018-07-01,Robusta (global),86.2
+2018-08-01,Robusta (global),82.5
+2018-09-01,Robusta (global),78.4
+2018-10-01,Robusta (global),87.2
+2018-11-01,Robusta (global),85.3
+2018-12-01,Robusta (global),79.2
+2019-01-01,Robusta (global),79.9
+2019-02-01,Robusta (global),80.4
+2019-03-01,Robusta (global),78.6
+2019-04-01,Robusta (global),74.8
+2019-05-01,Robusta (global),72.7
+2019-06-01,Robusta (global),75.6
+2019-07-01,Robusta (global),75.5
+2019-08-01,Robusta (global),72.3
+2019-09-01,Robusta (global),72.2
+2019-10-01,Robusta (global),70.1
+2019-11-01,Robusta (global),74.9
+2019-12-01,Robusta (global),74.9
+2020-01-01,Robusta (global),72.1
+2020-02-01,Robusta (global),69.5
+2020-03-01,Robusta (global),68.9
+2020-04-01,Robusta (global),65.4
+2020-05-01,Robusta (global),65.9
+2020-06-01,Robusta (global),66.0
+2020-07-01,Robusta (global),69.1
+2020-08-01,Robusta (global),74.2
+2020-09-01,Robusta (global),74.3
+2020-10-01,Robusta (global),69.8
+2020-11-01,Robusta (global),73.9
+2020-12-01,Robusta (global),73.5
+2021-01-01,Robusta (global),72.3
+2021-02-01,Robusta (global),75.0
+2021-03-01,Robusta (global),75.5
+2021-04-01,Robusta (global),76.1
+2021-05-01,Robusta (global),81.4
+2021-06-01,Robusta (global),86.8
+2021-07-01,Robusta (global),96.1
+2021-08-01,Robusta (global),96.9
+2021-09-01,Robusta (global),106.8
+2021-10-01,Robusta (global),107.6
+2021-11-01,Robusta (global),111.8
+2021-12-01,Robusta (global),114.9
+2022-01-01,Robusta (global),112.1
+2022-02-01,Robusta (global),111.8
+2022-03-01,Robusta (global),106.2
+2022-04-01,Robusta (global),106.2
+2022-05-01,Robusta (global),105.4
+2022-06-01,Robusta (global),106.1
+2022-07-01,Robusta (global),102.6
+2022-08-01,Robusta (global),112.1
+2022-09-01,Robusta (global),113.8
+2022-10-01,Robusta (global),105.2
+2022-11-01,Robusta (global),94.6
+2022-12-01,Robusta (global),94.4
+2023-01-01,Robusta (global),98.1
+2023-02-01,Robusta (global),106.2
+2023-03-01,Robusta (global),108.8
+2023-04-01,Robusta (global),118.1
+2023-05-01,Robusta (global),125.2
+2023-06-01,Robusta (global),135.0
+2023-07-01,Robusta (global),130.3
+2023-08-01,Robusta (global),127.0
+2023-09-01,Robusta (global),126.6
+2023-10-01,Robusta (global),121.4
+2023-11-01,Robusta (global),125.4
+2023-12-01,Robusta (global),138.3
+2024-01-01,Robusta (global),151.3
+2024-02-01,Robusta (global),156.5
+2024-03-01,Robusta (global),169.4
+2024-04-01,Robusta (global),197.9
+2024-05-01,Robusta (global),190.5
+2024-06-01,Robusta (global),208.7
+2024-07-01,Robusta (global),219.2
+2024-08-01,Robusta (global),219.3
+2024-09-01,Robusta (global),247.7
+2024-10-01,Robusta (global),226.7
+2024-11-01,Robusta (global),231.0
+2024-12-01,Robusta (global),242.8
+2025-01-01,Robusta (global),250.2
+2025-02-01,Robusta (global),268.7
+2025-03-01,Robusta (global),263.3
+2025-04-01,Robusta (global),251.9
+2025-05-01,Robusta (global),242.4
+2025-06-01,Robusta (global),200.5
+2025-07-01,Robusta (global),170.8
+2025-08-01,Robusta (global),203.2
+2025-09-01,Robusta (global),215.4
+2025-10-01,Robusta (global),219.7
+2025-11-01,Robusta (global),219.5
+2025-12-01,Robusta (global),194.3
+2026-01-01,Robusta (global),196.4
+2026-02-01,Robusta (global),183.5
+2026-03-01,Robusta (global),180.6
+2015-01-01,AU retail coffee,100.0
+2015-02-01,AU retail coffee,100.2
+2015-03-01,AU retail coffee,100.4
+2015-04-01,AU retail coffee,100.6
+2015-05-01,AU retail coffee,100.8
+2015-06-01,AU retail coffee,101.0
+2015-07-01,AU retail coffee,101.2
+2015-08-01,AU retail coffee,101.5
+2015-09-01,AU retail coffee,101.7
+2015-10-01,AU retail coffee,101.9
+2015-11-01,AU retail coffee,102.1
+2015-12-01,AU retail coffee,102.3
+2016-01-01,AU retail coffee,102.5
+2016-02-01,AU retail coffee,102.7
+2016-03-01,AU retail coffee,102.9
+2016-04-01,AU retail coffee,103.1
+2016-05-01,AU retail coffee,103.3
+2016-06-01,AU retail coffee,103.5
+2016-07-01,AU retail coffee,103.8
+2016-08-01,AU retail coffee,104.0
+2016-09-01,AU retail coffee,104.2
+2016-10-01,AU retail coffee,104.4
+2016-11-01,AU retail coffee,104.6
+2016-12-01,AU retail coffee,104.8
+2017-01-01,AU retail coffee,105.0
+2017-02-01,AU retail coffee,105.2
+2017-03-01,AU retail coffee,105.4
+2017-04-01,AU retail coffee,105.6
+2017-05-01,AU retail coffee,105.8
+2017-06-01,AU retail coffee,106.0
+2017-07-01,AU retail coffee,106.2
+2017-08-01,AU retail coffee,106.5
+2017-09-01,AU retail coffee,106.7
+2017-10-01,AU retail coffee,106.9
+2017-11-01,AU retail coffee,107.1
+2017-12-01,AU retail coffee,107.3
+2018-01-01,AU retail coffee,107.5
+2018-02-01,AU retail coffee,107.7
+2018-03-01,AU retail coffee,107.9
+2018-04-01,AU retail coffee,108.1
+2018-05-01,AU retail coffee,108.3
+2018-06-01,AU retail coffee,108.5
+2018-07-01,AU retail coffee,108.7
+2018-08-01,AU retail coffee,109.0
+2018-09-01,AU retail coffee,109.2
+2018-10-01,AU retail coffee,109.4
+2018-11-01,AU retail coffee,109.6
+2018-12-01,AU retail coffee,109.8
+2019-01-01,AU retail coffee,110.0
+2019-02-01,AU retail coffee,110.2
+2019-03-01,AU retail coffee,110.3
+2019-04-01,AU retail coffee,110.5
+2019-05-01,AU retail coffee,110.7
+2019-06-01,AU retail coffee,110.8
+2019-07-01,AU retail coffee,111.0
+2019-08-01,AU retail coffee,111.2
+2019-09-01,AU retail coffee,111.3
+2019-10-01,AU retail coffee,111.5
+2019-11-01,AU retail coffee,111.7
+2019-12-01,AU retail coffee,111.8
+2020-01-01,AU retail coffee,112.0
+2020-02-01,AU retail coffee,112.2
+2020-03-01,AU retail coffee,112.3
+2020-04-01,AU retail coffee,112.5
+2020-05-01,AU retail coffee,112.7
+2020-06-01,AU retail coffee,112.8
+2020-07-01,AU retail coffee,113.0
+2020-08-01,AU retail coffee,113.2
+2020-09-01,AU retail coffee,113.3
+2020-10-01,AU retail coffee,113.5
+2020-11-01,AU retail coffee,113.7
+2020-12-01,AU retail coffee,113.8
+2021-01-01,AU retail coffee,114.0
+2021-02-01,AU retail coffee,114.4
+2021-03-01,AU retail coffee,114.8
+2021-04-01,AU retail coffee,115.3
+2021-05-01,AU retail coffee,115.7
+2021-06-01,AU retail coffee,116.1
+2021-07-01,AU retail coffee,116.5
+2021-08-01,AU retail coffee,116.9
+2021-09-01,AU retail coffee,117.3
+2021-10-01,AU retail coffee,117.8
+2021-11-01,AU retail coffee,118.2
+2021-12-01,AU retail coffee,118.6
+2022-01-01,AU retail coffee,119.0
+2022-02-01,AU retail coffee,119.9
+2022-03-01,AU retail coffee,120.8
+2022-04-01,AU retail coffee,121.8
+2022-05-01,AU retail coffee,122.7
+2022-06-01,AU retail coffee,123.6
+2022-07-01,AU retail coffee,124.5
+2022-08-01,AU retail coffee,125.4
+2022-09-01,AU retail coffee,126.3
+2022-10-01,AU retail coffee,127.2
+2022-11-01,AU retail coffee,128.2
+2022-12-01,AU retail coffee,129.1
+2023-01-01,AU retail coffee,130.0
+2023-02-01,AU retail coffee,131.1
+2023-03-01,AU retail coffee,132.2
+2023-04-01,AU retail coffee,133.2
+2023-05-01,AU retail coffee,134.3
+2023-06-01,AU retail coffee,135.4
+2023-07-01,AU retail coffee,136.5
+2023-08-01,AU retail coffee,137.6
+2023-09-01,AU retail coffee,138.7
+2023-10-01,AU retail coffee,139.8
+2023-11-01,AU retail coffee,140.8
+2023-12-01,AU retail coffee,141.9
+2024-01-01,AU retail coffee,143.0
+2024-02-01,AU retail coffee,144.4
+2024-03-01,AU retail coffee,145.8
+2024-04-01,AU retail coffee,147.2
+2024-05-01,AU retail coffee,148.7
+2024-06-01,AU retail coffee,150.1
+2024-07-01,AU retail coffee,151.5
+2024-08-01,AU retail coffee,152.9
+2024-09-01,AU retail coffee,154.3
+2024-10-01,AU retail coffee,155.8
+2024-11-01,AU retail coffee,157.2
+2024-12-01,AU retail coffee,158.6
+2025-01-01,AU retail coffee,160.0
+2025-02-01,AU retail coffee,161.0
+2025-03-01,AU retail coffee,162.0
+2025-04-01,AU retail coffee,163.0
+2025-05-01,AU retail coffee,164.0
+2025-06-01,AU retail coffee,165.0
+2025-07-01,AU retail coffee,166.0
+2025-08-01,AU retail coffee,167.0
+2025-09-01,AU retail coffee,168.0
+2025-10-01,AU retail coffee,169.0
+2025-11-01,AU retail coffee,170.0
+2025-12-01,AU retail coffee,171.0
+2026-01-01,AU retail coffee,172.0
